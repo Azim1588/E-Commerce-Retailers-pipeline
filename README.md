@@ -9,6 +9,10 @@ The pipeline architecture is designed to efficiently handle large volumes of dat
 - **Data Transformation**: Data transformations are performed using Mage AI, which runs on a Google Cloud VM.
 - **Data Loading**: The transformed data is loaded into Google BigQuery.
 - **Data Visualization**: The data in BigQuery is visualized using Looker Studio to create dashboards.
+![Project Architecture](image_url)
+![Data Modeling](image_url)
+
+
 
 ## Prerequisites
 
@@ -40,17 +44,69 @@ cd e-commerce-retailers-pipeline
 6. SSH into the VM once it's created.
 
 ## Step 3: Install Mage AI
-# Clone the Mage AI repository (or install via pip)
+Clone the Mage AI repository (or install via pip)
 git clone https://github.com/mage-ai/mage-ai.git
 
-# Change to the Mage AI directory
+ Change to the Mage AI directory
 cd mage-ai
 
-# Install Mage AI using pip
+Install Mage AI using pip
 pip3 install .
 
-# Alternatively, you can install it directly using pip:
+ Alternatively, you can install it directly using pip:
 pip3 install mage-ai
+
+
+## Step 4: Set Up the Environment
+ Create a new project directory
+mkdir my_mage_project
+cd my_mage_project
+
+ Initialize a new Mage project
+mage init my_project
+
+## Step 5: Run Mage AI
+Start Mage AI server
+mage start my_project
+
+### Step 6: Access Mage AI Interface
+
+Once the server is running, you can access the Mage AI interface by visiting the external IP of your VM in your browser at `http://<YOUR_VM_EXTERNAL_IP>:6789`.
+
+#### Optional: Set Up a Firewall Rule for Port 6789
+
+**Allow Traffic on Port 6789:**
+
+1. Go to **VPC Network > Firewall** in the Google Cloud Console.
+2. Click on **Create Firewall Rule**.
+3. Name it `mage-ai`.
+4. Set **Targets** to `All instances in the network`.
+5. Set **Source IP ranges** to `0.0.0.0/0`.
+6. Set **Protocols and ports** to `tcp:6789`.
+7. Click **Create**.
+
+Now you can access the Mage AI interface through the browser using the VM's external IP.
+
+### Step 7: Stop the Server
+
+To stop the Mage AI server, press `Ctrl+C` in the terminal where it is running.
+
+### 3. Data Storage in BigQuery
+
+The transformed data is then loaded into a BigQuery data warehouse. This step involves creating and populating fact and dimension tables that are optimized for reporting.
+
+### 4. Dashboard & Reporting
+
+Once the data is in BigQuery, it can be connected to Looker Studio (formerly Google Data Studio) to create interactive dashboards and reports. These dashboards provide insights into sales performance, customer behavior, and other key metrics.
+
+### 5. Dashboard & Reporting
+
+Once the data is in BigQuery, it can be connected to Looker Studio (formerly Google Data Studio) to create interactive dashboards and reports. These dashboards provide insights into sales performance, customer behavior, and other key metrics.
+
+![Dashboard](image_url)
+
+
+
 
 
 
