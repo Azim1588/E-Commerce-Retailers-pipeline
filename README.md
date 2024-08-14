@@ -1,61 +1,62 @@
-# E-Commerce Retailers Pipeline Data Engineering Project
+## Project Overview
+This project focuses on building a data engineering pipeline for E-Commerce Retailers. The pipeline automates the process of extracting CSV files from Google Cloud Storage, transforming the data, and loading it into Google BigQuery. Finally, the data is visualized using Looker Studio to create insightful dashboards. The pipeline is orchestrated using Mage AI, which is hosted on a Google Cloud VM.
 
-This repository contains the code and resources for building a data engineering pipeline for an E-Commerce Retailer. The pipeline is designed to extract data from CSV files stored in Google Cloud Storage, process and transform the data, and load it into BigQuery for analysis and reporting. Finally, the data is visualized using Looker Studio to create comprehensive dashboards.
+## Architecture
 
-## Table of Contents
+The pipeline architecture is designed to efficiently handle large volumes of data and consists of the following key components:
 
-- [Architecture Overview](#architecture-overview)
-- [Setup and Installation](#setup-and-installation)
-- [Data Pipeline Steps](#data-pipeline-steps)
-  - [1. Data Ingestion](#1-data-ingestion)
-  - [2. Data Processing & Transformation Layer](#2-data-processing--transformation-layer)
-  - [3. Data Storage in BigQuery](#3-data-storage-in-bigquery)
-  - [4. Dashboard & Reporting](#4-dashboard--reporting)
-- [How to Run the Pipeline](#how-to-run-the-pipeline)
+- **Data Ingestion**: CSV files are extracted from Google Cloud Storage.
+- **Data Transformation**: Data transformations are performed using Mage AI, which runs on a Google Cloud VM.
+- **Data Loading**: The transformed data is loaded into Google BigQuery.
+- **Data Visualization**: The data in BigQuery is visualized using Looker Studio to create dashboards.
 
-## Setup and Installation
+## Prerequisites
 
-### Prerequisites
+Before you begin, ensure you have the following installed:
 
-- Python 3.8+
-- Google Cloud SDK
-- BigQuery API enabled
-- Google Cloud Storage Bucket
-- Service Account with necessary permissions
+- **Python 3.8+**: The pipeline is developed in Python and requires version 3.8 or higher.
+- **Google Cloud SDK**: Required for interacting with Google Cloud services.
+- **Google BigQuery**: Used as the data warehouse for storing and querying transformed data.
+- **Looker Studio**: Used for creating dashboards from the data in BigQuery.
 
-### Installation
+## Setup Instructions
 
-#### Step 1: Set Up a Google Cloud VM
-
-1. **Create a New VM Instance:**
-   - Go to the [Google Cloud Console](https://console.cloud.google.com/).
-   - Navigate to **Compute Engine > VM instances**.
-   - Click on **Create Instance**.
-   - Configure the instance:
-     - Choose a name for your instance.
-     - Select a region and zone.
-     - Choose the machine type (e.g., `e2-medium` for moderate usage).
-     - Under **Boot disk**, select **Ubuntu 20.04 LTS**.
-     - Click on **Create**.
-
-2. **Connect to the VM Instance:**
-   - Once the instance is running, click **SSH** to open a terminal window connected to your VM.
-
-#### Step 2: Update and Install Dependencies
+### 1. Clone the Repository
 
 ```bash
-# Update the package list
-sudo apt-get update
+git clone https://github.com/your-username/e-commerce-retailers-pipeline.git
+cd e-commerce-retailers-pipeline
+```
 
-# Upgrade the existing packages
-sudo apt-get upgrade -y
+### 2. Set Up Google Cloud VM with Mage AI
 
-# Install Python 3.8 (if not already installed)
-sudo apt-get install python3.8 python3.8-venv python3.8-dev -y
+#### a. Create a Google Cloud VM Instance
 
-# Install pip
-sudo apt-get install python3-pip -y
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Navigate to **Compute Engine** > **VM Instances**.
+3. Click on **Create Instance**.
+4. Choose the machine type and configuration as needed.
+5. Set up the VM with a public IP address.
+6. SSH into the VM once it's created.
 
-# Install Git (if not already installed)
-sudo apt-get install git -y
-                       
+## Step 3: Install Mage AI
+# Clone the Mage AI repository (or install via pip)
+git clone https://github.com/mage-ai/mage-ai.git
+
+# Change to the Mage AI directory
+cd mage-ai
+
+# Install Mage AI using pip
+pip3 install .
+
+# Alternatively, you can install it directly using pip:
+pip3 install mage-ai
+
+
+
+
+
+
+
+   
+
