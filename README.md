@@ -12,8 +12,6 @@ This repository contains the code and resources for building a data engineering 
   - [3. Data Storage in BigQuery](#3-data-storage-in-bigquery)
   - [4. Dashboard & Reporting](#4-dashboard--reporting)
 - [How to Run the Pipeline](#how-to-run-the-pipeline)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Setup and Installation
 
@@ -60,10 +58,4 @@ sudo apt-get install python3-pip -y
 
 # Install Git (if not already installed)
 sudo apt-get install git -y
-
-
-
-
-
-
-                                 
+                       
