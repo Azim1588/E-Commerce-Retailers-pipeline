@@ -1,5 +1,3 @@
-markdown
-Copy code
 # E-Commerce Retailers Pipeline Data Engineering Project
 
 This repository contains the code and resources for building a data engineering pipeline for an E-Commerce Retailer. The pipeline is designed to extract data from CSV files stored in Google Cloud Storage, process and transform the data, and load it into BigQuery for analysis and reporting. Finally, the data is visualized using Looker Studio to create comprehensive dashboards.
@@ -62,62 +60,7 @@ sudo apt-get install python3-pip -y
 
 # Install Git (if not already installed)
 sudo apt-get install git -y
-Step 3: Install Mage AI
-bash
-Copy code
-# Clone the Mage AI repository (or install via pip)
-git clone https://github.com/mage-ai/mage-ai.git
 
-# Change to the Mage AI directory
-cd mage-ai
-
-# Install Mage AI using pip
-pip3 install .
-
-# Alternatively, you can install it directly using pip:
-pip3 install mage-ai
-Step 4: Set Up the Environment
-bash
-Copy code
-# Create a new project directory
-mkdir my_mage_project
-cd my_mage_project
-
-# Initialize a new Mage project
-mage init my_project
-Step 5: Run Mage AI
-bash
-Copy code
-# Start Mage AI server
-mage start my_project
-Step 6: Access Mage AI Interface
-Once the server is running, you can access the Mage AI interface by visiting the external IP of your VM in your browser at http://<YOUR_VM_EXTERNAL_IP>:6789.
-
-Optional: Set Up a Firewall Rule for Port 6789
-
-Allow Traffic on Port 6789:
-Go to VPC Network > Firewall in the Google Cloud Console.
-Click on Create Firewall Rule.
-Name it mage-ai.
-Set Targets to All instances in the network.
-Set Source IP ranges to 0.0.0.0/0.
-Set Protocols and ports to tcp:6789.
-Click Create.
-Now you can access the Mage AI interface through the browser using the VM's external IP.
-
-Step 7: Stop the Server
-To stop the Mage AI server, press Ctrl+C in the terminal where it is running.
-
-Contributing
-Contributions are welcome! Please fork this repository and submit a pull request with your changes.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-python
-Copy code
-
-This README file is now formatted correctly for GitHub and includes all the necessary secti
 
 
 
