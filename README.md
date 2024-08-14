@@ -9,8 +9,8 @@ The pipeline architecture is designed to efficiently handle large volumes of dat
 - **Data Transformation**: Data transformations are performed using Mage AI, which runs on a Google Cloud VM.
 - **Data Loading**: The transformed data is loaded into Google BigQuery.
 - **Data Visualization**: The data in BigQuery is visualized using Looker Studio to create dashboards.
-![Project Architecture](image_url)
-![Data Modeling](image_url)
+![Project Architecture](https://github.com/Azim1588/E-Commerce-Retailers-pipeline/blob/main/E-Commerce_Retailers_pipeline/Architecture%20(2).png?raw=true)
+![Data Modeling](https://github.com/Azim1588/E-Commerce-Retailers-pipeline/blob/main/E-Commerce_Retailers_pipeline/Data_modeling_diagram.png?raw=true)
 
 
 
@@ -48,26 +48,26 @@ Clone the Mage AI repository (or install via pip)
 git clone https://github.com/mage-ai/mage-ai.git
 
  Change to the Mage AI directory
-cd mage-ai
+`cd mage-ai`
 
 Install Mage AI using pip
-pip3 install .
+`pip3 install `.
 
  Alternatively, you can install it directly using pip:
-pip3 install mage-ai
+`pip3 install mage-ai`
 
 
 ## Step 4: Set Up the Environment
  Create a new project directory
-mkdir my_mage_project
-cd my_mage_project
+`mkdir my_mage_project`
+`cd my_mage_project`
 
  Initialize a new Mage project
-mage init my_project
+`mage init my_project`
 
 ## Step 5: Run Mage AI
 Start Mage AI server
-mage start my_project
+`mage start my_project`
 
 ### Step 6: Access Mage AI Interface
 
@@ -103,7 +103,7 @@ Once the data is in BigQuery, it can be connected to Looker Studio (formerly Goo
 
 Once the data is in BigQuery, it can be connected to Looker Studio (formerly Google Data Studio) to create interactive dashboards and reports. These dashboards provide insights into sales performance, customer behavior, and other key metrics.
 
-![Dashboard](image_url)
+![Dashboard](https://github.com/Azim1588/E-Commerce-Retailers-pipeline/blob/main/E-Commerce_Retailers_pipeline/image/Looker_Studio_reporting.png?raw=true)
 
 
 
